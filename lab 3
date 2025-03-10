@@ -1,1 +1,13 @@
-
+import math 
+def f(x,epsilon):
+  P=0
+  n=1
+  a=-x
+  while abs(a)>=epsilon:
+    P+=a
+    n+=1
+    a=(-x**n)/math.factorial(a)
+  return P
+x=0,8
+epsilon=0,001
+print(P)
