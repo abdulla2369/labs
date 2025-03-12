@@ -1,1 +1,10 @@
+def f(a,b,c,x,bc):
+    if bc<10:
+       return 7*a*x+b*c
+    elif bc==10:
+       return 3*x-2*b
+    else:
+       return 6*x+c
+z=f(a,b,c,x,bc)
+print(z)
 
