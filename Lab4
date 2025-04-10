@@ -1,0 +1,2 @@
+a=[a(-3,10) for in Range(10)]
+print(a)
