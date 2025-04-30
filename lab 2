@@ -1,10 +1,21 @@
-def f(a,b,c,x,bc):
-    if bc<10:
-       return 7*a*x+b*c
-    elif bc==10:
-       return 3*x-2*b
-    else:
-       return 6*x+c
-z=f(a,b,c,x,bc)
-print(z)
+a = 2
+b = 1.1
+c = -3
+bc = b * c
+xs = []
+zs = []
+x ∈ [4; 20], Δx = 2
+x = 4
+while x <= 20
+ if bc < 10:
+ z = 7 * a * x + bc
+ elif bc == 10:
+ z = 3 * x - 2 * b
+ else: # bc > 10
+ z = 6 * x + c
+ xs.append(x)
+ zs.append(z)
+ x += 2
+for xi, zi in zip(xs, zs):
+ print(f"x = {xi:>2}, z = {zi}"
 
