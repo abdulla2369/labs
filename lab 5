@@ -1,0 +1,6 @@
+B = [3, 10, 15, 8, 20, 5]
+hasil = 1
+for i in B:
+ if i > 9:
+ hasil *= i
+print(hasil)
