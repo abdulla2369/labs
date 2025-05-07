@@ -1,0 +1,26 @@
+import math
+
+def f(x):
+    return x**2 - math.cos(x)
+
+def bisection_method(a, b, tol=1e-6, max_iter=100):
+    if f(a) * f(b) >= 0:
+        print("Bu intervalda Bisection metodu tətbiq edilə bilməz.")
+        return None
+
+    for i in range(max_iter):
+        c = (a + b) / 2
+        if abs(f(c)) < tol or (b - a) / 2 < tol:
+            print(f"Kök təqribən {c} nöqtəsindədir. Iterasiya sayı: {i+1}")
+            return c
+        if f(a) * f(c) < 0:
+            b = c
+        else:
+            a = c
+    print("Maksimum iterasiya sayına çatıldı.")
+    return (a + b) / 2
+
+a = 0.0
+b = 1.0
+
+kök = bisection_method(a, b)
