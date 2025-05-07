@@ -1,0 +1,12 @@
+import math
+
+def hendesi_orta_bas_diaqonal(A):
+    n = len(A)
+    hasil = 1
+    for i in range(n):
+        hasil *= A[i][i]
+    return math.pow(hasil, 1/n)
+
+A = []
+orta = hendesi_orta_bas_diaqonal(A)
+print(orta)
