@@ -1,0 +1,24 @@
+import numpy as np
+from scipy.optimize import bisect
+import matplotlib.pyplot as plt
+
+# Funksiya: f(x) = x^2 - cos(x)
+def f(x):
+    return x**2 - np.cos(x)
+
+# Axtarış aralığı: [0.0, 1.0]
+a = 0.0
+b = 1.0
+
+# Kökü tapırıq
+kok = bisect(f, a, b)
+
+# Nəticəni çap edirik
+print(f"Kök: {kok}")
+
+# Funksiyanın qrafikini çəkirik
+x_deyerleri = np.linspace(a, b, 100)
+y_deyerleri = f(x_deyerleri)
+
+plt.plot(x_deyerleri, y_deyerleri, label="f(x) = x² - cos(x)")
+plt.axhline(0, color='gray', l
